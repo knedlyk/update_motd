@@ -1,0 +1,11 @@
+[Unit]
+Description=Update motd
+After=sshdgenkeys.service
+
+[Service]
+ExecStart=
+ExecStart=/usr/local/bin/update_motd.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
